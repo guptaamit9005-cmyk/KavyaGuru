@@ -64,11 +64,13 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 input, textarea, select {
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem; /* 16px prevents iOS Safari auto-zoom on focus */
   color: var(--kg-text-primary);
   background: var(--kg-bg-surface);
   border: 1px solid var(--kg-border);
@@ -76,6 +78,15 @@ input, textarea, select {
   padding: 0.75rem 1rem;
   transition: all var(--kg-transition-fast);
   width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -92,8 +103,8 @@ input:focus, textarea:focus, select:focus {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--kg-bg-main);
@@ -116,10 +127,17 @@ input:focus, textarea:focus, select:focus {
   padding-right: 1.5rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .kg-container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .kg-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -149,6 +167,37 @@ input:focus, textarea:focus, select:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .kg-grid-2,
+  .kg-grid-3,
+  .kg-grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+}
+
+/* Responsive Visibility Helpers */
+.kg-hide-sm {
+  display: inline;
+}
+.kg-show-sm {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .kg-hide-sm {
+    display: none !important;
+  }
+  .kg-show-sm {
+    display: inline-flex !important;
+  }
+}
+
+.kg-tap-target {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /* Badges & Taglines */

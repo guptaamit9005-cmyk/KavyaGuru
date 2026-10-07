@@ -698,5 +698,11 @@ const I18n = {
         footerBtnEn.classList.add("active");
       }
     }
+
+    // Mobile Drawer Language Switcher Button Label
+    const drawerLang = document.getElementById("drawerLangLabel");
+    if (drawerLang) {
+      drawerLang.textContent = isHindi ? "English (EN)" : "हिंदी (Hindi)";
+    }
   }
 };

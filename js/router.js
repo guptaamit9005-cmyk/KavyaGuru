@@ -63,6 +63,20 @@ const Router = {
       }
     });
 
+    document.querySelectorAll(".kg-drawer-nav-link").forEach(link => {
+      const target = link.getAttribute("data-route");
+      if (target === routeName) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    // Close mobile drawer if open
+    if (window.UIManager && typeof window.UIManager.closeMobileDrawer === "function") {
+      window.UIManager.closeMobileDrawer();
+    }
+
     // Update Browser title with official branding
     const routeTitles = {
       home: "Kavya Guru — Read • Learn • Grow",

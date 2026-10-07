@@ -124,9 +124,77 @@
 @media (max-width: 960px) {
   .kg-hero-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .kg-hero-visual {
     order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .kg-hero-section {
+    padding: 1.75rem 0 1.25rem;
+  }
+
+  .kg-hero-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .kg-hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .kg-hero-visual img {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kg-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .kg-hero-actions .kg-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+
+  .kg-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  .kg-stat-num {
+    font-size: 1.25rem;
+  }
+
+  .kg-stat-label {
+    font-size: 0.68rem;
+  }
+
+  .kg-hero-visual-badge {
+    position: static;
+    margin: 0.75rem;
+    border-radius: var(--kg-radius-md);
+    padding: 0.65rem 0.85rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .kg-hero-visual-badge .kg-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -444,6 +512,23 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 540px) {
+  .kg-recite-tune-row > div {
+    flex: 1 1 100% !important;
+  }
+  .kg-recite-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .kg-recite-play-main,
+  .kg-recite-actions-row .kg-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
 }
 
 .kg-recite-play-main {
@@ -1014,4 +1099,118 @@
   border-radius: var(--kg-radius-sm);
   border: 1px solid var(--kg-border);
   margin-top: 0.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. Global Responsive Overrides for Mobile Experience
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* View Sections compact spacing */
+  .kg-view-section > .kg-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .kg-view-section h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .kg-view-section .kg-flex-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .kg-view-section .kg-flex-between > button,
+  .kg-view-section .kg-flex-between > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Admin Dashboard Mobile */
+  .kg-admin-table-wrap {
+    margin-top: 1rem;
+    border-radius: var(--kg-radius-md);
+    box-shadow: inset -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+  }
+
+  .kg-admin-table th, 
+  .kg-admin-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  /* Profile View Banner Mobile */
+  #view-profile .kg-container > div:first-child {
+    padding: 1.25rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  #view-profile .kg-container > div:first-child > div:last-child {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Footer Mobile Refinements */
+  .kg-footer {
+    padding: 2.5rem 0 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .kg-footer-grid {
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .kg-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .kg-footer-bottom > div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Stanza text font on mobile phones */
+  .kg-poetry-stanza {
+    font-size: 1.15rem !important;
+    line-height: 2 !important;
+    padding: 0.25rem !important;
+  }
+
+  .kg-poem-manuscript-img {
+    max-height: 230px;
+  }
+
+  .kg-poem-pdf-box {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .kg-poem-pdf-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kg-poem-pdf-box .kg-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Video player container responsive 16:9 ratio */
+  #videoPlayerContainer iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
 }

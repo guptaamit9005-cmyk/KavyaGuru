@@ -67,7 +67,11 @@
   /* Layout Constraints */
   --kg-max-width: 1280px;
   --kg-nav-height: 72px;
-  --kg-mobile-nav-height: 64px;
+  --kg-nav-height-mobile: 60px;
+  --kg-mobile-nav-height: 60px;
+  --kg-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --kg-safe-area-top: env(safe-area-inset-top, 0px);
+  --kg-drawer-width: min(320px, 86vw);
 }
 
 /* Dark Mode Theme Overrides */

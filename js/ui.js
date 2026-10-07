@@ -22,6 +22,7 @@ const UIManager = {
     this.initKeyboardShortcuts();
     this.initToastContainer();
     this.initSpeechVoices();
+    this.initMobileDrawer();
     this.hideSplash();
   },
 
@@ -44,6 +45,11 @@ const UIManager = {
 
   updateThemeIcons(theme) {
     const btn = document.getElementById("themeToggleBtn");
+    const drawerThemeIcon = document.getElementById("drawerThemeIcon");
+    if (drawerThemeIcon) {
+      drawerThemeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+    }
+
     if (!btn) return;
     if (theme === "dark") {
       btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
@@ -140,6 +146,55 @@ const UIManager = {
     document.querySelectorAll(".kg-modal-overlay.open").forEach(modal => {
       this.closeModal(modal.id);
     });
+    this.closeMobileDrawer();
+  },
+
+  // ------------------------------------------------------------------------
+  // 4B. Mobile Drawer Navigation Controller
+  // ------------------------------------------------------------------------
+  initMobileDrawer() {
+    const trigger = document.getElementById("mobileMenuToggleBtn");
+    const closeBtn = document.getElementById("kgMobileDrawerCloseBtn");
+    const backdrop = document.getElementById("kgMobileDrawerBackdrop");
+
+    if (trigger) {
+      trigger.addEventListener("click", () => this.openMobileDrawer());
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => this.closeMobileDrawer());
+    }
+    if (backdrop) {
+      backdrop.addEventListener("click", () => this.closeMobileDrawer());
+    }
+
+    // Auto-close drawer when any drawer nav link is tapped
+    document.querySelectorAll(".kg-drawer-nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        this.closeMobileDrawer();
+      });
+    });
+  },
+
+  openMobileDrawer() {
+    const drawer = document.getElementById("kgMobileDrawer");
+    const backdrop = document.getElementById("kgMobileDrawerBackdrop");
+    if (drawer) drawer.classList.add("open");
+    if (backdrop) backdrop.classList.add("open");
+    document.body.style.overflow = "hidden";
+  },
+
+  closeMobileDrawer() {
+    const drawer = document.getElementById("kgMobileDrawer");
+    const backdrop = document.getElementById("kgMobileDrawerBackdrop");
+    if (drawer) drawer.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("open");
+    document.body.style.overflow = "";
+  },
+
+  toggleLanguage() {
+    if (typeof I18n !== "undefined" && typeof I18n.toggleLanguage === "function") {
+      I18n.toggleLanguage();
+    }
   },
 
   // ------------------------------------------------------------------------

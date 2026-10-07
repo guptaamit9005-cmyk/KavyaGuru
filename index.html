@@ -2,7 +2,12 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#5925dc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
   <!-- Primary SEO Metadata -->
   <title>Kavya Guru — Read • Learn • Grow</title>
@@ -140,9 +145,105 @@
 
         <!-- User Auth / Profile Button -->
         <button id="authNavBtn" class="kg-btn kg-btn-sm kg-btn-secondary" style="border-radius: var(--kg-radius-full); padding: 0.35rem 0.85rem; gap: 0.4rem;"></button>
+
+        <!-- Mobile Navigation Menu Toggle Button -->
+        <button id="mobileMenuToggleBtn" class="kg-btn-icon kg-mobile-menu-trigger" title="Open Navigation Menu" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- ========================================================================
+       1.5 Mobile Navigation Drawer & Backdrop
+       ======================================================================== -->
+  <div id="kgMobileDrawerBackdrop" class="kg-drawer-backdrop"></div>
+  <aside id="kgMobileDrawer" class="kg-mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="kg-drawer-header">
+      <div class="kg-brand-logo" onclick="Router.navigate('home'); UIManager.closeMobileDrawer();" style="cursor: pointer;">
+        <div class="kg-brand-mark">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        </div>
+        <div class="kg-brand-text">
+          <span class="kg-brand-name">Kavya Guru</span>
+          <span class="kg-brand-tagline-sub">Read • Learn • Grow</span>
+        </div>
+      </div>
+      <button id="kgMobileDrawerCloseBtn" class="kg-modal-close" aria-label="Close Mobile Menu">✕</button>
+    </div>
+
+    <!-- Mobile Drawer User Quick Profile / Auth Box -->
+    <div class="kg-drawer-user-card" id="kgDrawerUserCard">
+      <!-- Injected dynamically in App.updateUserNavState() -->
+    </div>
+
+    <!-- Mobile Drawer Navigation Links -->
+    <nav class="kg-drawer-nav">
+      <div class="kg-drawer-nav-group-title">Platform Hubs</div>
+      <a href="#home" class="kg-drawer-nav-link" data-route="home">
+        <span class="kg-drawer-nav-icon">🏠</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_home">Home</span>
+      </a>
+      <a href="#poetry" class="kg-drawer-nav-link" data-route="poetry">
+        <span class="kg-drawer-nav-icon">📜</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_poetry">Kavya Manch (Poetry)</span>
+      </a>
+      <a href="#notes" class="kg-drawer-nav-link" data-route="notes">
+        <span class="kg-drawer-nav-icon">📚</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_notes">Educational Notes</span>
+      </a>
+      <a href="#videos" class="kg-drawer-nav-link" data-route="videos">
+        <span class="kg-drawer-nav-icon">▶️</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_videos">YouTube Video Modules</span>
+      </a>
+      <a href="#courses" class="kg-drawer-nav-link" data-route="courses">
+        <span class="kg-drawer-nav-icon">🎥</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_courses">Google Meet Live</span>
+      </a>
+      <a href="#career" class="kg-drawer-nav-link" data-route="career">
+        <span class="kg-drawer-nav-icon">🧭</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_career">Career Guidance & Roadmaps</span>
+      </a>
+      <a href="#community" class="kg-drawer-nav-link" data-route="community">
+        <span class="kg-drawer-nav-icon">💬</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_community">Kavya Guru Charcha</span>
+      </a>
+      <a href="#profile" class="kg-drawer-nav-link" data-route="profile">
+        <span class="kg-drawer-nav-icon">👤</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_account">My Profile & Library</span>
+      </a>
+      <a href="#admin" class="kg-drawer-nav-link" data-route="admin">
+        <span class="kg-drawer-nav-icon">🔒</span>
+        <span class="kg-drawer-nav-text" data-i18n="nav_admin">Admin Control Portal</span>
+      </a>
+
+      <div class="kg-drawer-nav-group-title" style="margin-top: 1rem;">Creative & Study Actions</div>
+      <button class="kg-drawer-action-btn" onclick="App.openSubmitPoemModal(); UIManager.closeMobileDrawer();">
+        <span>✍️</span> <span>Submit Your Poem</span>
+      </button>
+      <button class="kg-drawer-action-btn" onclick="App.openCareerQuiz(); UIManager.closeMobileDrawer();">
+        <span>🎯</span> <span>Career Match Quiz</span>
+      </button>
+      <button class="kg-drawer-action-btn" onclick="UIManager.openGlobalSearch(); UIManager.closeMobileDrawer();">
+        <span>🔍</span> <span>Global Search</span>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer Footer Actions -->
+    <div class="kg-drawer-footer">
+      <div class="kg-drawer-footer-actions">
+        <button id="drawerLangToggleBtn" class="kg-btn kg-btn-sm kg-btn-secondary" style="flex: 1;" onclick="UIManager.toggleLanguage();">
+          🌐 <span id="drawerLangLabel">हिंदी / EN</span>
+        </button>
+        <button class="kg-btn kg-btn-sm kg-btn-secondary" style="flex: 1;" onclick="UIManager.toggleTheme();">
+          <span id="drawerThemeIcon">🌓</span> <span>Theme</span>
+        </button>
+      </div>
+      <div style="font-size: 0.72rem; color: var(--kg-text-tertiary); text-align: center; margin-top: 0.75rem;">
+        Kavya Guru • Read • Learn • Grow
+      </div>
+    </div>
+  </aside>
 
   <!-- ========================================================================
        2. Main Content Container & Dynamic Views

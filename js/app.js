@@ -179,21 +179,52 @@ const App = {
   updateUserNavState() {
     const user = StorageManager.getUser();
     const authBtn = document.getElementById("authNavBtn");
-    if (!authBtn) return;
+    const drawerUserCard = document.getElementById("kgDrawerUserCard");
 
     if (user && user.isLoggedIn) {
-      authBtn.innerHTML = `
-        <span style="width: 28px; height: 28px; border-radius: 50%; background: var(--kg-brand-primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">${user.avatar || 'KG'}</span>
-        <span class="kg-hide-sm" style="font-size: 0.88rem; font-weight: 600;">${(user.name || 'Student').split(' ')[0]}</span>
-      `;
-      authBtn.setAttribute("title", `Logged in as ${user.name}`);
+      if (authBtn) {
+        authBtn.innerHTML = `
+          <span style="width: 28px; height: 28px; border-radius: 50%; background: var(--kg-brand-primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">${user.avatar || 'KG'}</span>
+          <span class="kg-hide-sm" style="font-size: 0.88rem; font-weight: 600;">${(user.name || 'Student').split(' ')[0]}</span>
+        `;
+        authBtn.setAttribute("title", `Logged in as ${user.name}`);
+      }
+
+      if (drawerUserCard) {
+        drawerUserCard.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--kg-brand-primary), var(--kg-brand-accent)); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.88rem; font-weight: bold; box-shadow: 0 2px 8px var(--kg-brand-primary-glow);">${user.avatar || 'KG'}</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem; color: var(--kg-text-primary); line-height: 1.2;">${user.name || 'Student'}</div>
+              <div style="font-size: 0.75rem; color: var(--kg-text-tertiary);">${user.email || 'Free Member'}</div>
+            </div>
+          </div>
+          <button class="kg-btn kg-btn-sm kg-btn-outline" onclick="App.handleLogout(); UIManager.closeMobileDrawer();" style="padding: 0.35rem 0.65rem; font-size: 0.78rem;">
+            Log Out
+          </button>
+        `;
+      }
     } else {
       const signInLabel = typeof I18n !== "undefined" ? I18n.t("nav_login") : "Sign In";
-      authBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        <span class="kg-hide-sm" style="font-size: 0.88rem; font-weight: 600;">${signInLabel}</span>
-      `;
-      authBtn.setAttribute("title", signInLabel);
+      if (authBtn) {
+        authBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="kg-hide-sm" style="font-size: 0.88rem; font-weight: 600;">${signInLabel}</span>
+        `;
+        authBtn.setAttribute("title", signInLabel);
+      }
+
+      if (drawerUserCard) {
+        drawerUserCard.innerHTML = `
+          <div>
+            <div style="font-weight: 700; font-size: 0.92rem; color: var(--kg-text-primary);">Guest Student</div>
+            <div style="font-size: 0.75rem; color: var(--kg-text-secondary);">Join our youth creative space</div>
+          </div>
+          <button class="kg-btn kg-btn-sm kg-btn-primary" onclick="App.openAuthModal(); UIManager.closeMobileDrawer();" style="padding: 0.4rem 0.9rem;">
+            ${signInLabel}
+          </button>
+        `;
+      }
     }
   },
 
