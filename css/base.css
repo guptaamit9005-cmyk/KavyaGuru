@@ -1,0 +1,250 @@
+/* ==========================================================================
+   KAVYA GURU — Base & Typography Styles
+   Brand: KAVYA GURU | Tagline: Read • Learn • Grow
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--kg-font-sans);
+  background-color: var(--kg-bg-main);
+  color: var(--kg-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color var(--kg-transition-normal), color var(--kg-transition-normal);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--kg-text-primary);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw + 0.75rem, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.65rem); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 0.95rem; }
+
+p {
+  color: var(--kg-text-secondary);
+  font-size: 1rem;
+}
+
+a {
+  color: var(--kg-brand-primary);
+  text-decoration: none;
+  transition: color var(--kg-transition-fast);
+}
+
+a:hover {
+  color: var(--kg-brand-primary-hover);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--kg-text-primary);
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-md);
+  padding: 0.75rem 1rem;
+  transition: all var(--kg-transition-fast);
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--kg-border-focus);
+  box-shadow: 0 0 0 3px var(--kg-brand-primary-glow);
+}
+
+/* Selection */
+::selection {
+  background: var(--kg-brand-primary-light);
+  color: var(--kg-brand-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--kg-bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kg-border-hover);
+  border-radius: var(--kg-radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kg-brand-primary);
+}
+
+/* Main Container */
+.kg-container {
+  width: 100%;
+  max-width: var(--kg-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .kg-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Utility Flex / Grid */
+.kg-flex { display: flex; }
+.kg-flex-center { display: flex; align-items: center; justify-content: center; }
+.kg-flex-between { display: flex; align-items: center; justify-content: space-between; }
+.kg-flex-col { display: flex; flex-direction: column; }
+.kg-gap-1 { gap: 0.5rem; }
+.kg-gap-2 { gap: 1rem; }
+.kg-gap-3 { gap: 1.5rem; }
+.kg-gap-4 { gap: 2rem; }
+
+.kg-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.kg-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.kg-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Badges & Taglines */
+.kg-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--kg-brand-primary-light);
+  color: var(--kg-brand-primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--kg-radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(89, 37, 220, 0.15);
+}
+
+.kg-accent-pill {
+  background: var(--kg-brand-accent-light);
+  color: var(--kg-brand-accent-hover);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--kg-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Poetic Text Formats */
+.kg-poetry-font {
+  font-family: var(--kg-font-serif);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.kg-hindi-font {
+  font-family: var(--kg-font-hindi);
+}
+
+/* Glassmorphism Surface */
+.kg-glass {
+  background: var(--kg-bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--kg-border);
+}
+
+.kg-hidden {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px var(--kg-brand-primary-glow); }
+  50% { box-shadow: 0 0 30px var(--kg-brand-primary-glow); }
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.kg-animate-fade {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.kg-animate-pulse {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.kg-animate-float {
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+/* Multilingual Typography & Devanagari Polish */
+html[data-lang="hi"] body {
+  letter-spacing: 0.01em;
+}
+
+html[data-lang="hi"] h1,
+html[data-lang="hi"] h2,
+html[data-lang="hi"] h3,
+html[data-lang="hi"] .kg-card-title,
+html[data-lang="hi"] .kg-hero-title,
+html[data-lang="hi"] .kg-section-title {
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+html[data-lang="hi"] .kg-poetry-stanza {
+  font-family: var(--kg-font-hindi);
+  line-height: 2.15;
+  font-size: 1.15rem;
+}
+

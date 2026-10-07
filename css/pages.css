@@ -1,0 +1,1017 @@
+/* ==========================================================================
+   KAVYA GURU — Page-Specific Layouts & Views
+   Brand: KAVYA GURU | Tagline: Read • Learn • Grow
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero Banner
+   -------------------------------------------------------------------------- */
+.kg-hero-section {
+  position: relative;
+  padding: 3.5rem 0 2.5rem;
+  overflow: hidden;
+}
+
+.kg-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.kg-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.kg-hero-title {
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.kg-hero-title .gradient-text {
+  background: linear-gradient(135deg, var(--kg-brand-primary), #a855f7 60%, var(--kg-brand-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kg-hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--kg-text-secondary);
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+.kg-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.kg-hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--kg-border);
+  width: 100%;
+}
+
+.kg-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.kg-stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--kg-brand-primary);
+  line-height: 1.2;
+}
+
+.kg-stat-label {
+  font-size: 0.8rem;
+  color: var(--kg-text-tertiary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kg-hero-visual {
+  position: relative;
+  border-radius: var(--kg-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--kg-shadow-xl);
+  border: 1px solid var(--kg-border);
+  background: var(--kg-bg-surface);
+}
+
+.kg-hero-visual img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.kg-hero-visual:hover img {
+  transform: scale(1.02);
+}
+
+.kg-hero-visual-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: var(--kg-bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--kg-radius-lg);
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 960px) {
+  .kg-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .kg-hero-visual {
+    order: -1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Explore Pillars Feature Section
+   -------------------------------------------------------------------------- */
+.kg-pillars-section {
+  padding: 3rem 0;
+}
+
+.kg-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.kg-section-title {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.kg-section-desc {
+  font-size: 1.05rem;
+  color: var(--kg-text-secondary);
+}
+
+/* Feature Pillar Cards */
+.kg-pillar-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all var(--kg-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.kg-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--kg-brand-primary), var(--kg-brand-accent));
+  opacity: 0;
+  transition: opacity var(--kg-transition-fast);
+}
+
+.kg-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(89, 37, 220, 0.3);
+}
+
+.kg-pillar-card:hover::before {
+  opacity: 1;
+}
+
+.kg-pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--kg-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Poetry Corner (Kavya Manch)
+   -------------------------------------------------------------------------- */
+.kg-poetry-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: all var(--kg-transition-normal);
+}
+
+.kg-poetry-card:hover {
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(89, 37, 220, 0.3);
+}
+
+.kg-poetry-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.kg-poetry-stanza {
+  font-family: var(--kg-font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--kg-text-primary);
+  white-space: pre-line;
+  padding: 1rem 0;
+  border-top: 1px dashed var(--kg-border);
+  border-bottom: 1px dashed var(--kg-border);
+}
+
+.kg-poetry-stanza.hindi {
+  font-family: var(--kg-font-hindi);
+  font-style: normal;
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
+.kg-poet-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kg-poet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--kg-brand-primary-light);
+  color: var(--kg-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.kg-poet-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--kg-text-primary);
+}
+
+.kg-poet-info span {
+  font-size: 0.78rem;
+  color: var(--kg-text-tertiary);
+}
+
+/* Recite Modal Visualizer */
+.kg-recite-visualizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 40px;
+  margin: 1rem 0;
+}
+
+.kg-recite-bar {
+  width: 4px;
+  height: 12px;
+  background: var(--kg-brand-primary);
+  border-radius: 2px;
+  animation: pulseBar 1.2s ease-in-out infinite;
+}
+.kg-recite-bar:nth-child(2) { animation-delay: 0.2s; }
+.kg-recite-bar:nth-child(3) { animation-delay: 0.4s; }
+.kg-recite-bar:nth-child(4) { animation-delay: 0.6s; }
+.kg-recite-bar:nth-child(5) { animation-delay: 0.3s; }
+.kg-recite-bar:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes pulseBar {
+  0%, 100% { height: 8px; }
+  50% { height: 32px; background: var(--kg-brand-accent); }
+}
+
+/* Multilingual Audio Recitation Studio */
+.kg-recite-studio {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  box-shadow: var(--kg-shadow-sm);
+  transition: all var(--kg-transition-fast);
+}
+
+.kg-recite-studio.is-playing {
+  border-color: var(--kg-brand-accent);
+  box-shadow: 0 0 20px var(--kg-brand-accent-glow);
+}
+
+.kg-recite-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--kg-border);
+}
+
+.kg-recite-status-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--kg-text-secondary);
+}
+
+.kg-recite-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--kg-border);
+  transition: all 0.3s;
+}
+
+.kg-recite-studio.is-playing .kg-recite-status-dot {
+  background: var(--kg-brand-emerald);
+  box-shadow: 0 0 8px var(--kg-brand-emerald);
+  animation: pulseDot 1.2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.kg-recite-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .kg-recite-controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kg-recite-ctrl-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--kg-text-tertiary);
+  margin-bottom: 0.4rem;
+}
+
+.kg-recite-lang-group {
+  display: inline-flex;
+  width: 100%;
+  background: var(--kg-bg-muted);
+  border-radius: var(--kg-radius-md);
+  padding: 3px;
+  gap: 3px;
+}
+
+.kg-recite-lang-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--kg-text-secondary);
+  border-radius: var(--kg-radius-sm);
+  cursor: pointer;
+  transition: all var(--kg-transition-fast);
+}
+
+.kg-recite-lang-btn:hover {
+  color: var(--kg-text-primary);
+}
+
+.kg-recite-lang-btn.active {
+  background: var(--kg-brand-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 6px var(--kg-brand-primary-glow);
+}
+
+.kg-recite-select {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--kg-radius-md);
+  border: 1px solid var(--kg-border);
+  background: var(--kg-bg-surface);
+  color: var(--kg-text-primary);
+  outline: none;
+  transition: border-color var(--kg-transition-fast);
+}
+
+.kg-recite-select:focus {
+  border-color: var(--kg-brand-accent);
+}
+
+.kg-recite-tune-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.kg-recite-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kg-recite-play-main {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  padding: 0.65rem 1.25rem;
+}
+
+/* Stanza Reading Switcher Tabs (Original vs Translation) */
+.kg-stanza-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.kg-stanza-tab-btn {
+  background: var(--kg-bg-muted);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-full);
+  padding: 0.3rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--kg-text-secondary);
+  cursor: pointer;
+  transition: all var(--kg-transition-fast);
+}
+
+.kg-stanza-tab-btn:hover {
+  border-color: var(--kg-brand-primary);
+  color: var(--kg-brand-primary);
+}
+
+.kg-stanza-tab-btn.active {
+  background: var(--kg-brand-primary);
+  color: #ffffff;
+  border-color: var(--kg-brand-primary);
+}
+
+.kg-recite-active-line {
+  color: var(--kg-brand-primary) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px var(--kg-brand-primary-glow);
+  transition: all 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   4. Educational Notes Vault
+   -------------------------------------------------------------------------- */
+.kg-notes-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: all var(--kg-transition-normal);
+}
+
+.kg-notes-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+.kg-notes-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.kg-note-pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--kg-radius-sm);
+  background: var(--kg-bg-muted);
+  color: var(--kg-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   5. YouTube Learning Resources (External YouTube Player)
+   -------------------------------------------------------------------------- */
+.kg-video-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--kg-transition-normal);
+  text-decoration: none;
+  color: inherit;
+}
+
+.kg-video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.kg-video-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0f172a;
+  overflow: hidden;
+  display: block;
+}
+
+.kg-video-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.kg-video-thumb-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.kg-video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #ff0000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5);
+  transition: transform var(--kg-transition-fast), background var(--kg-transition-fast);
+}
+
+.kg-video-thumb-wrap:hover .kg-video-play-btn {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: #cc0000;
+}
+
+.kg-video-yt-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.kg-video-duration {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.kg-video-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   6. Live Google Meet Courses
+   -------------------------------------------------------------------------- */
+.kg-meet-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: all var(--kg-transition-normal);
+  position: relative;
+}
+
+.kg-meet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.kg-meet-live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--kg-brand-emerald);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kg-meet-live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--kg-brand-emerald);
+  border-radius: 50%;
+  animation: pulseGlow 1.5s infinite;
+}
+
+.kg-meet-schedule {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--kg-bg-muted);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--kg-radius-md);
+  font-size: 0.85rem;
+  color: var(--kg-text-secondary);
+}
+
+.kg-meet-seat-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--kg-border);
+  border-radius: var(--kg-radius-full);
+  overflow: hidden;
+}
+
+.kg-meet-seat-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--kg-brand-accent), var(--kg-brand-primary));
+  border-radius: var(--kg-radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   7. Career Guidance & Mentorship
+   -------------------------------------------------------------------------- */
+.kg-career-path-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--kg-transition-normal);
+}
+
+.kg-career-path-card:hover {
+  box-shadow: var(--kg-shadow-xl);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.kg-roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px dashed var(--kg-border);
+  margin: 0.5rem 0;
+}
+
+.kg-roadmap-step {
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--kg-text-secondary);
+}
+
+.kg-roadmap-step::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.5rem - 5px);
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: var(--kg-brand-emerald);
+  border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   8. Student Community (Kavya Guru Charcha)
+   -------------------------------------------------------------------------- */
+.kg-thread-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--kg-transition-normal);
+}
+
+.kg-thread-card:hover {
+  border-color: rgba(89, 37, 220, 0.3);
+  box-shadow: var(--kg-shadow-md);
+}
+
+.kg-thread-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--kg-text-tertiary);
+}
+
+.kg-thread-act-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: inherit;
+  transition: color var(--kg-transition-fast);
+}
+
+.kg-thread-act-btn:hover, .kg-thread-act-btn.active {
+  color: var(--kg-brand-primary);
+}
+
+/* --------------------------------------------------------------------------
+   9. Admin Dashboard View
+   -------------------------------------------------------------------------- */
+.kg-admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.kg-admin-stat-card {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kg-admin-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--kg-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.kg-admin-table-wrap {
+  background: var(--kg-bg-surface);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.kg-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.kg-admin-table th {
+  background: var(--kg-bg-muted);
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  color: var(--kg-text-secondary);
+  border-bottom: 1px solid var(--kg-border);
+}
+
+.kg-admin-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--kg-border);
+  color: var(--kg-text-primary);
+}
+
+.kg-admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.kg-admin-table tr:hover td {
+  background: var(--kg-bg-muted);
+}
+
+/* --------------------------------------------------------------------------
+   10. Brand Footer
+   -------------------------------------------------------------------------- */
+.kg-footer {
+  background: var(--kg-bg-surface);
+  border-top: 1px solid var(--kg-border);
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+}
+
+.kg-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.kg-footer-brand-desc {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--kg-text-secondary);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.kg-footer-col h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--kg-text-primary);
+}
+
+.kg-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.kg-footer-links a {
+  color: var(--kg-text-secondary);
+  font-size: 0.9rem;
+  transition: color var(--kg-transition-fast);
+}
+
+.kg-footer-links a:hover {
+  color: var(--kg-brand-primary);
+  padding-left: 4px;
+}
+
+.kg-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--kg-border);
+  font-size: 0.85rem;
+  color: var(--kg-text-tertiary);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .kg-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .kg-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Poem Manuscript / Image & PDF Attachments
+   -------------------------------------------------------------------------- */
+.kg-poem-manuscript-box {
+  background: var(--kg-bg-muted);
+  border: 1px solid var(--kg-border);
+  border-radius: var(--kg-radius-lg);
+  padding: 1rem;
+  margin: 1.25rem auto;
+  max-width: 580px;
+  text-align: center;
+  box-shadow: var(--kg-shadow-sm);
+  transition: transform var(--kg-transition-fast);
+}
+
+.kg-poem-manuscript-img {
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  border-radius: var(--kg-radius-md);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform var(--kg-transition-fast);
+}
+
+.kg-poem-manuscript-img:hover {
+  transform: scale(1.02);
+}
+
+.kg-poem-manuscript-caption {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--kg-text-secondary);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.kg-poem-pdf-box {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(245, 158, 11, 0.08));
+  border: 1.5px dashed rgba(239, 68, 68, 0.35);
+  border-radius: var(--kg-radius-lg);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem auto;
+  max-width: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.kg-poem-pdf-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.kg-poem-pdf-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.kg-card-badge.pdf {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.kg-card-badge.image {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.kg-admin-file-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--kg-bg-muted);
+  border: 1px dashed var(--kg-border);
+  border-radius: var(--kg-radius-md);
+  padding: 0.75rem;
+}
+
+.kg-admin-thumb-preview {
+  max-width: 120px;
+  max-height: 80px;
+  object-fit: cover;
+  border-radius: var(--kg-radius-sm);
+  border: 1px solid var(--kg-border);
+  margin-top: 0.4rem;
+}

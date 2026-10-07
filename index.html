@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Metadata -->
+  <title>Kavya Guru — Read • Learn • Grow</title>
+  <meta name="description" content="Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance. Explore Hindi & English poetry, educational notes, YouTube masterclasses, and live Google Meet courses.">
+  <meta name="keywords" content="Kavya Guru, Poetry, Hindi Sahitya, Educational Notes, YouTube Learning, Google Meet Courses, Career Guidance, Student Community, Read Learn Grow">
+  <meta name="author" content="Kavya Guru">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kavyaguru.com/">
+  <meta property="og:title" content="Kavya Guru — Read • Learn • Grow">
+  <meta property="og:description" content="Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance.">
+  <meta property="og:image" content="./assets/images/kavya_guru_hero.jpg">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kavya Guru — Read • Learn • Grow">
+  <meta name="twitter:description" content="Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance.">
+  <meta name="twitter:image" content="./assets/images/kavya_guru_hero.jpg">
+
+  <!-- Favicon (Inline SVG Brand Mark) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%235925dc'/><path d='M28 70 C 28 40, 50 30, 72 25 C 65 45, 52 58, 28 70 Z' fill='%23f59e0b'/><circle cx='68' cy='28' r='6' fill='%23ffffff'/></svg>">
+
+  <!-- Modern Google Fonts: Outfit (Sans) + Playfair Display (Serif) + Noto Serif Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Kavya Guru",
+    "alternateName": "Kavya Guru Platform",
+    "url": "https://kavyaguru.com",
+    "logo": "https://kavyaguru.com/assets/images/kavya_guru_hero.jpg",
+    "slogan": "Read • Learn • Grow",
+    "description": "Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance.",
+    "sameAs": [
+      "https://youtube.com/@KavyaGuru",
+      "https://t.me/KavyaGuruOfficial"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       0. Branded Loading / Splash Screen
+       ======================================================================== -->
+  <div id="kgSplashScreen" class="kg-splash-screen">
+    <div class="kg-splash-logo-box">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        <circle cx="12" cy="9" r="2.5" fill="#f59e0b" stroke="none"></circle>
+      </svg>
+    </div>
+    <div class="kg-splash-title">KAVYA GURU</div>
+    <div class="kg-splash-tagline">Read • Learn • Grow</div>
+    <div class="kg-spinner"></div>
+  </div>
+
+  <!-- ========================================================================
+       1. Global Brand Header & Navigation
+       ======================================================================== -->
+  <header class="kg-header">
+    <div class="kg-container kg-nav-inner">
+      <!-- Official Brand Logo -->
+      <a href="#home" class="kg-brand-logo" data-route="home">
+        <div class="kg-brand-mark">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="kg-brand-text">
+          <span class="kg-brand-name" data-i18n="brand_name">Kavya Guru</span>
+          <span class="kg-brand-tagline-sub" data-i18n="brand_tagline">Read • Learn • Grow</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Student / User Section) -->
+      <nav class="kg-nav-links" aria-label="Main Navigation">
+        <a href="#home" class="kg-nav-link active" data-route="home" data-i18n="nav_home">Home</a>
+        <a href="#poetry" class="kg-nav-link" data-route="poetry" data-i18n="nav_poetry">Poetry</a>
+        <a href="#notes" class="kg-nav-link" data-route="notes" data-i18n="nav_notes">Notes</a>
+        <a href="#videos" class="kg-nav-link" data-route="videos" data-i18n="nav_videos">Videos</a>
+        <a href="#courses" class="kg-nav-link" data-route="courses" data-i18n="nav_courses">Google Meet</a>
+        <a href="#career" class="kg-nav-link" data-route="career" data-i18n="nav_career">Career</a>
+        <a href="#community" class="kg-nav-link" data-route="community" data-i18n="nav_community">Community</a>
+      </nav>
+
+      <!-- Global Actions -->
+      <div class="kg-nav-actions">
+        <!-- Multilingual Language Toggle Pill (Hindi / English) -->
+        <div class="kg-lang-switcher" id="langSwitcherWrap">
+          <button id="langToggleBtn" class="kg-lang-toggle" title="Switch Language / भाषा बदलें" aria-label="Switch Language / भाषा बदलें">
+            <span class="kg-lang-icon">🌐</span>
+            <span class="kg-lang-pill-track">
+              <span id="langOptEn" class="kg-lang-opt">EN</span>
+              <span id="langOptHi" class="kg-lang-opt active">हिं</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Global Search Trigger -->
+        <button id="globalSearchTrigger" class="kg-search-trigger" title="Search Kavya Guru (Ctrl+K)" data-i18n-title="nav_search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span class="kg-hide-sm" data-i18n="nav_search">Search</span>
+          <span class="kg-search-shortcut">⌘K</span>
+        </button>
+
+        <!-- Notification Bell -->
+        <button id="notificationBellBtn" class="kg-btn-icon" title="Notifications & Announcements" data-i18n-title="nav_notifications" style="position: relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span id="notifBadge" class="kg-hidden" style="position: absolute; top: 6px; right: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--kg-brand-rose);"></span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="kg-btn-icon" title="Switch Theme" data-i18n-title="theme_switch_title"></button>
+
+        <!-- Dedicated Admin Section Entry -->
+        <button id="adminPortalNavBtn" class="kg-btn kg-btn-sm kg-btn-outline" style="border-radius: var(--kg-radius-full); padding: 0.35rem 0.75rem;" title="Admin Control Portal" onclick="Router.navigate('admin')">
+          🔒 <span data-i18n="nav_admin">Admin</span>
+        </button>
+
+        <!-- User Auth / Profile Button -->
+        <button id="authNavBtn" class="kg-btn kg-btn-sm kg-btn-secondary" style="border-radius: var(--kg-radius-full); padding: 0.35rem 0.85rem; gap: 0.4rem;"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Main Content Container & Dynamic Views
+       ======================================================================== -->
+  <main id="mainContent" style="flex: 1;">
+
+    <!-- ====================================================================
+         VIEW A: HOME DISCOVERY
+         ==================================================================== -->
+    <section id="view-home" class="kg-view-section">
+      <!-- Grand Hero Banner -->
+      <div class="kg-hero-section">
+        <div class="kg-container">
+          <div class="kg-hero-grid">
+            <div class="kg-hero-content">
+              <span class="kg-tagline-badge" data-i18n="hero_badge">
+                ✦ Official Platform: Kavya Guru
+              </span>
+
+              <h1 class="kg-hero-title">
+                <span data-i18n="hero_title_prefix">The Youth Space for</span> <br/>
+                <span class="gradient-text" data-i18n="hero_title_highlight">Poetry, Knowledge & Career.</span>
+              </h1>
+
+              <p class="kg-hero-subtitle">
+                <strong data-i18n="brand_tagline">Read • Learn • Grow</strong><br>
+                <span data-i18n="hero_subtitle">Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance. Empowering curious minds with timeless literature, curated academic vaults, YouTube video lessons, and live Google Meet mentor workshops.</span>
+              </p>
+
+              <div class="kg-hero-actions">
+                <button class="kg-btn kg-btn-primary" onclick="Router.navigate('poetry')" data-i18n="hero_btn_poetry">
+                  Explore Kavya Manch 📜
+                </button>
+                <button class="kg-btn kg-btn-accent" onclick="Router.navigate('courses')" data-i18n="hero_btn_courses">
+                  Join Google Meet Live 🎥
+                </button>
+                <button class="kg-btn kg-btn-secondary" onclick="Router.navigate('notes')" data-i18n="hero_btn_notes">
+                  Access Study Notes 📚
+                </button>
+              </div>
+
+              <!-- Live Platform Metrics -->
+              <div class="kg-hero-stats">
+                <div class="kg-stat-item">
+                  <span class="kg-stat-num" data-i18n="hero_stat_poems_num">500+</span>
+                  <span class="kg-stat-label" data-i18n="hero_stat_poems_label">Timeless Poems</span>
+                </div>
+                <div class="kg-stat-item">
+                  <span class="kg-stat-num" data-i18n="hero_stat_students_num">12,000+</span>
+                  <span class="kg-stat-label" data-i18n="hero_stat_students_label">Students Guided</span>
+                </div>
+                <div class="kg-stat-item">
+                  <span class="kg-stat-num" data-i18n="hero_stat_free_num">100%</span>
+                  <span class="kg-stat-label" data-i18n="hero_stat_free_label">Free Access</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Visual Artwork -->
+            <div class="kg-hero-visual">
+              <img src="./assets/images/kavya_guru_hero.jpg" alt="Kavya Guru — Read Learn Grow Digital Learning and Literature" />
+              <div class="kg-hero-visual-badge">
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem; color: var(--kg-text-primary);" data-i18n="hero_visual_badge_title">Kavya Guru Masterclass</div>
+                  <div style="font-size: 0.78rem; color: var(--kg-brand-accent); font-weight: 600;" data-i18n="hero_visual_badge_sub">Live Google Meet Every Weekend</div>
+                </div>
+                <button class="kg-btn kg-btn-sm kg-btn-primary" onclick="Router.navigate('courses')" data-i18n="hero_visual_badge_btn">View Schedule</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 Pillars Exploration Section -->
+      <section class="kg-pillars-section">
+        <div class="kg-container">
+          <div class="kg-section-header">
+            <span class="kg-tagline-badge" data-i18n="pillars_badge">Explore Our Universe</span>
+            <h2 class="kg-section-title" data-i18n="pillars_title">Everything You Need To Grow</h2>
+            <p class="kg-section-desc" data-i18n="pillars_desc">Six interconnected learning and creative dimensions brought together under one unified brand.</p>
+          </div>
+
+          <div class="kg-grid-3">
+            <div class="kg-pillar-card" onclick="Router.navigate('poetry')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-primary-light); color: var(--kg-brand-primary);">🖋️</div>
+              <h3 class="kg-card-title" data-i18n="p1_title">1. Kavya Manch (Poetry)</h3>
+              <p class="kg-card-body" data-i18n="p1_desc">Classic and modern Hindi & English poetry, Ghazals, and original student submissions with audio recitation reader.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-primary); font-size: 0.9rem;" data-i18n="p1_cta">Explore Poetry →</span>
+            </div>
+
+            <div class="kg-pillar-card" onclick="Router.navigate('notes')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-secondary-light); color: var(--kg-brand-secondary);">📖</div>
+              <h3 class="kg-card-title" data-i18n="p2_title">2. Educational Notes</h3>
+              <p class="kg-card-body" data-i18n="p2_desc">High-yield study guides for Hindi Sahitya, English literature, grammar rules, and competitive exam summaries.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-secondary); font-size: 0.9rem;" data-i18n="p2_cta">Access Notes →</span>
+            </div>
+
+            <div class="kg-pillar-card" onclick="Router.navigate('videos')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-rose-light); color: var(--kg-brand-rose);">▶️</div>
+              <h3 class="kg-card-title" data-i18n="p3_title">3. YouTube Learning Hub</h3>
+              <p class="kg-card-body" data-i18n="p3_desc">Curated high-impact video lectures, recitation masterclasses, and exam strategies with timestamps and key takeaways.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-rose); font-size: 0.9rem;" data-i18n="p3_cta">Watch Lectures →</span>
+            </div>
+
+            <div class="kg-pillar-card" onclick="Router.navigate('courses')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-accent-light); color: var(--kg-brand-accent-hover);">🎥</div>
+              <h3 class="kg-card-title" data-i18n="p4_title">4. Google Meet Live Courses</h3>
+              <p class="kg-card-body" data-i18n="p4_desc">Interactive virtual workshops with renowned authors, poets, and academic mentors with real-time feedback.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-accent-hover); font-size: 0.9rem;" data-i18n="p4_cta">Join Live Batches →</span>
+            </div>
+
+            <div class="kg-pillar-card" onclick="Router.navigate('career')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-emerald-light); color: var(--kg-brand-emerald);">🧭</div>
+              <h3 class="kg-card-title" data-i18n="p5_title">5. Career Guidance & Roadmaps</h3>
+              <p class="kg-card-body" data-i18n="p5_desc">Actionable career tracks in Writing, Academia, Media, Civil Services, and 1-on-1 counselor appointments.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-emerald); font-size: 0.9rem;" data-i18n="p5_cta">Explore Pathways →</span>
+            </div>
+
+            <div class="kg-pillar-card" onclick="Router.navigate('community')">
+              <div class="kg-pillar-icon-box" style="background: var(--kg-brand-primary-light); color: var(--kg-brand-primary);">💬</div>
+              <h3 class="kg-card-title" data-i18n="p6_title">6. Kavya Guru Charcha</h3>
+              <p class="kg-card-body" data-i18n="p6_desc">Vibrant student forum for peer critique, daily creative contests, doubt clearance, and supportive study circles.</p>
+              <span style="font-weight: 600; color: var(--kg-brand-primary); font-size: 0.9rem;" data-i18n="p6_cta">Enter Charcha →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Home Snippets -->
+      <section style="padding: 2.5rem 0; background: var(--kg-bg-muted);">
+        <div class="kg-container">
+          <div class="kg-flex-between" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="kg-tagline-badge" data-i18n="home_trending_badge">Trending Poems</span>
+              <h2 style="font-size: 1.5rem; margin-top: 0.25rem;" data-i18n="home_trending_title">Poetic Verses Inspiring Thousands</h2>
+            </div>
+            <button class="kg-btn kg-btn-outline" onclick="Router.navigate('poetry')" data-i18n="home_view_all_poems">View All Poems</button>
+          </div>
+          <div id="homeFeaturedPoetry" class="kg-grid-3"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================================
+         VIEW B: POETRY CORNER (KAVYA MANCH)
+         ==================================================================== -->
+    <section id="view-poetry" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" data-i18n="poetry_badge">काव्य मंच • Kavya Manch</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="poetry_title">Poetry & Timeless Verses</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="poetry_subtitle">Recite, experience, and celebrate the melody of emotions in Hindi & English.</p>
+          </div>
+          <button class="kg-btn kg-btn-primary" onclick="App.openSubmitPoemModal()" data-i18n="poetry_submit_btn">
+            ✍️ Submit Your Kavya
+          </button>
+        </div>
+
+        <!-- Filter Tab Bar -->
+        <div class="kg-tab-bar">
+          <button class="kg-tab-btn active" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('all');" data-i18n="tab_all_poems">All Poems</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('hindi');" data-i18n="tab_hindi_poems">हिंदी कविता (Hindi)</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('english');" data-i18n="tab_english_poems">English Poetry</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('ghazal');" data-i18n="tab_ghazal">ग़ज़ल एवं नज़्म (Ghazal)</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('inspirational');" data-i18n="tab_inspirational">Inspirational</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderPoetrySection('student');" data-i18n="tab_student">Student Submissions</button>
+        </div>
+
+        <!-- Poetry Grid -->
+        <div id="poetryGrid" class="kg-grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW C: EDUCATIONAL NOTES VAULT
+         ==================================================================== -->
+    <section id="view-notes" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" data-i18n="notes_badge">Study Vault</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="notes_title">Educational Notes & Guides</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="notes_subtitle">High-yield academic summaries, grammar cheat sheets, and literature analyses.</p>
+          </div>
+          <button class="kg-btn kg-btn-secondary" onclick="UIManager.openGlobalSearch()" data-i18n="notes_search_btn">
+            🔍 Search Notes
+          </button>
+        </div>
+
+        <div class="kg-tab-bar">
+          <button class="kg-tab-btn active" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderNotesSection('all');" data-i18n="tab_all_subjects">All Subjects</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderNotesSection('hindi');" data-i18n="tab_hindi_sahitya">हिंदी साहित्य</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderNotesSection('english');" data-i18n="tab_english_lit">English Literature</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderNotesSection('exam');" data-i18n="tab_exam_prep">Exams & CUET Prep</button>
+        </div>
+
+        <div id="notesGrid" class="kg-grid-2"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW D: YOUTUBE LEARNING RESOURCES
+         ==================================================================== -->
+    <section id="view-videos" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" style="background: var(--kg-brand-rose-light); color: var(--kg-brand-rose);" data-i18n="videos_badge">Video Vault</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="videos_title">YouTube Curated Masterclasses</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="videos_subtitle">Watch verified lectures with timestamp notes, recitation workshops, and exam tips.</p>
+          </div>
+          <a href="https://youtube.com/@KavyaGuru" target="_blank" rel="noopener noreferrer" class="kg-btn kg-btn-outline" style="border-color: var(--kg-brand-rose); color: var(--kg-brand-rose) !important;" data-i18n="videos_channel_btn">
+            ▶️ Official Kavya Guru Channel
+          </a>
+        </div>
+
+        <div class="kg-tab-bar">
+          <button class="kg-tab-btn active" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderVideosSection('all');" data-i18n="tab_all_videos">All Videos</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderVideosSection('Literature');" data-i18n="tab_literature_strategy">Literature Strategy</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderVideosSection('Poetry');" data-i18n="tab_recitation_mastery">Voice & Recitation</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderVideosSection('Grammar');" data-i18n="tab_grammar_writing">Grammar & Writing</button>
+          <button class="kg-tab-btn" onclick="this.parentElement.querySelectorAll('.kg-tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); App.renderVideosSection('Career');" data-i18n="tab_career_sessions">Career Sessions</button>
+        </div>
+
+        <div id="videosGrid" class="kg-grid-2"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW E: GOOGLE MEET LIVE COURSES
+         ==================================================================== -->
+    <section id="view-courses" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" style="background: var(--kg-brand-accent-light); color: var(--kg-brand-accent-hover);" data-i18n="courses_badge">Live Classes</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="courses_title">Google Meet Live Courses</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="courses_subtitle">Direct interactive sessions with distinguished mentors, authors, and educators.</p>
+          </div>
+          <button class="kg-btn kg-btn-accent" onclick="UIManager.showToast('All Kavya Guru live masterclasses are complimentary for registered youth students!', 'info')" data-i18n="courses_free_badge">
+            ℹ️ Free Student Access
+          </button>
+        </div>
+
+        <div id="meetCoursesGrid" class="kg-grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW F: CAREER GUIDANCE & ROADMAPS
+         ==================================================================== -->
+    <section id="view-career" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" style="background: var(--kg-brand-emerald-light); color: var(--kg-brand-emerald);" data-i18n="career_badge">Career Pathfinder</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="career_title">Career Guidance & Roadmaps</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="career_subtitle">Turn your passion for words and knowledge into a meaningful, sustainable career.</p>
+          </div>
+          <button class="kg-btn kg-btn-primary" onclick="App.openCareerQuiz()" data-i18n="career_quiz_btn">
+            🎯 Take Career Match Quiz
+          </button>
+        </div>
+
+        <div id="careerRoadmapsGrid" class="kg-grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW G: STUDENT COMMUNITY (KAVYA GURU CHARCHA)
+         ==================================================================== -->
+    <section id="view-community" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kg-tagline-badge" data-i18n="community_badge">काव्य गुरु चर्चा • Student Forum</span>
+            <h1 style="font-size: 2.25rem; margin-top: 0.25rem;" data-i18n="community_title">Kavya Guru Community</h1>
+            <p style="color: var(--kg-text-secondary);" data-i18n="community_subtitle">A safe, supportive circle for youth to share original poetry, ask academic doubts, and collaborate.</p>
+          </div>
+          <button class="kg-btn kg-btn-primary" onclick="App.openNewThreadModal()" data-i18n="community_new_btn">
+            💬 Start New Discussion
+          </button>
+        </div>
+
+
+        <div id="communityThreadsList" style="display: flex; flex-direction: column; gap: 1.25rem;"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW H: ADMIN CONTROL PORTAL (PROTECTED BY PASSWORD: Ashish123)
+         ==================================================================== -->
+    <section id="view-admin" class="kg-view-section kg-hidden">
+      <!-- 1. Admin Login Gate (Visible when not authenticated) -->
+      <div id="adminLoginGate" class="kg-admin-gate-wrap">
+        <div class="kg-admin-gate-box">
+          <div class="kg-admin-lock-icon">🔒</div>
+          <span class="kg-tagline-badge" style="margin-bottom: 0.5rem;">Admin Security Gate</span>
+          <h2 style="font-size: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Kavya Guru Admin Portal</h2>
+          <p style="font-size: 0.88rem; color: var(--kg-text-secondary); margin-bottom: 1.5rem;">
+            This section is restricted to administrators & faculty. Enter your master password to manage poetry, notes, YouTube resources, and live classes.
+          </p>
+
+          <form onsubmit="App.handleAdminLogin(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="text-align: left;">
+              <label style="font-size: 0.82rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Master Password</label>
+              <input type="password" id="adminPasswordInput" placeholder="Enter admin password" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="kg-btn kg-btn-primary" style="width: 100%;">
+              Unlock Admin Portal 🚀
+            </button>
+            <div id="adminLoginError" class="kg-hidden" style="color: var(--kg-brand-rose); font-size: 0.85rem; font-weight: 600;"></div>
+          </form>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--kg-border); font-size: 0.8rem; color: var(--kg-text-tertiary);">
+            Kavya Guru Platform • Read • Learn • Grow
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Admin Dashboard Panel (Visible when authenticated) -->
+      <div id="adminDashboardPanel" class="kg-container kg-hidden" style="padding-top: 2rem; padding-bottom: 3rem;">
+        <div class="kg-flex-between" style="margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-lg); padding: 1.25rem 1.5rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="kg-tagline-badge">Admin Access Active</span>
+              <span class="kg-accent-pill">Password: Ashish123</span>
+            </div>
+            <h1 style="font-size: 1.85rem; margin-top: 0.25rem;">Kavya Guru Control Center</h1>
+            <p style="color: var(--kg-text-secondary); font-size: 0.9rem;">Manage all website content in the SQLite database.</p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <button class="kg-btn kg-btn-sm kg-btn-secondary" onclick="App.openEmailPreview('em-01')">
+              📧 Email Templates
+            </button>
+            <button class="kg-btn kg-btn-sm kg-btn-outline" style="border-color: var(--kg-brand-rose); color: var(--kg-brand-rose) !important;" onclick="App.handleAdminLogout()">
+              🚪 Log Out Admin
+            </button>
+          </div>
+        </div>
+
+        <!-- Real Aggregate Database Stats -->
+        <div class="kg-admin-stats-grid">
+          <div class="kg-admin-stat-card">
+            <div class="kg-admin-stat-icon" style="background: var(--kg-brand-primary-light); color: var(--kg-brand-primary);">📜</div>
+            <div>
+              <div id="adminStatPoems" style="font-size: 1.5rem; font-weight: 800;">0</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Live Poems</div>
+            </div>
+          </div>
+
+          <div class="kg-admin-stat-card">
+            <div class="kg-admin-stat-icon" style="background: var(--kg-brand-secondary-light); color: var(--kg-brand-secondary);">📚</div>
+            <div>
+              <div id="adminStatNotes" style="font-size: 1.5rem; font-weight: 800;">0</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Study Notes</div>
+            </div>
+          </div>
+
+          <div class="kg-admin-stat-card">
+            <div class="kg-admin-stat-icon" style="background: var(--kg-brand-rose-light); color: var(--kg-brand-rose);">▶️</div>
+            <div>
+              <div id="adminStatVideos" style="font-size: 1.5rem; font-weight: 800;">0</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">YouTube Videos</div>
+            </div>
+          </div>
+
+          <div class="kg-admin-stat-card">
+            <div class="kg-admin-stat-icon" style="background: var(--kg-brand-accent-light); color: var(--kg-brand-accent-hover);">🎥</div>
+            <div>
+              <div id="adminStatMeet" style="font-size: 1.5rem; font-weight: 800;">0</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Live Meet Batches</div>
+            </div>
+          </div>
+
+          <div class="kg-admin-stat-card">
+            <div class="kg-admin-stat-icon" style="background: var(--kg-brand-emerald-light); color: var(--kg-brand-emerald);">🎓</div>
+            <div>
+              <div id="adminStatStudents" style="font-size: 1.5rem; font-weight: 800;">0</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Enrolled Students</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Management Navigation Sub-tabs -->
+        <div class="kg-admin-nav-tabs">
+          <button class="kg-admin-tab-btn active" onclick="App.switchAdminSubTab('poetry', this)">📜 Manage Poetry</button>
+          <button class="kg-admin-tab-btn" onclick="App.switchAdminSubTab('notes', this)">📚 Manage Notes</button>
+          <button class="kg-admin-tab-btn" onclick="App.switchAdminSubTab('videos', this)">▶️ YouTube Links</button>
+          <button class="kg-admin-tab-btn" onclick="App.switchAdminSubTab('courses', this)">🎥 Google Meet Batches</button>
+          <button class="kg-admin-tab-btn" onclick="App.switchAdminSubTab('community', this)">💬 Community Moderation</button>
+        </div>
+
+        <!-- SUBTAB 1: POETRY MANAGEMENT (Multilingual, Image & PDF Support) -->
+        <div id="adminTab-poetry" class="kg-admin-subtab-content">
+          <div style="background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Publish Poem to Kavya Manch (Text, Image & PDF)</h3>
+                <p style="font-size: 0.85rem; color: var(--kg-text-secondary); margin: 0;">Add original verses, multiple languages, handwritten manuscripts, and downloadable PDF books.</p>
+              </div>
+              <span class="kg-tagline-badge">🔒 Admin Privilege</span>
+            </div>
+
+            <form id="adminPoemForm" onsubmit="App.handleAdminAddPoem(event)" style="display: flex; flex-direction: column; gap: 1.15rem;">
+              <!-- Row 1: Title, Poet, Year -->
+              <div style="display: grid; grid-template-columns: 2fr 1.5fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Poem Title / कविता शीर्षक *</label>
+                  <input type="text" id="adminPoemTitle" placeholder="e.g. अग्निपथ, The Road Not Taken, मेघदूतम्" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Poet / Author Name / रचनाकार *</label>
+                  <input type="text" id="adminPoemAuthor" placeholder="e.g. हरिवंश राय बच्चन, Robert Frost, कालिदास" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Year / रचना वर्ष</label>
+                  <input type="text" id="adminPoemYear" placeholder="e.g. 1968" />
+                </div>
+              </div>
+
+              <!-- Row 2: Language (Multiple) & Category -->
+              <div style="display: grid; grid-template-columns: 1.5fr 1.5fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Recitation Language / भाषा *</label>
+                  <select id="adminPoemLang">
+                    <option value="hindi" selected>🇮🇳 Hindi (हिंदी)</option>
+                    <option value="english">🇬🇧 English</option>
+                    <option value="sanskrit">🕉️ Sanskrit (संस्कृत)</option>
+                    <option value="urdu">🌙 Urdu (اردو)</option>
+                    <option value="awadhi">🪶 Awadhi / Braj (अवधी / ब्रजभाषा)</option>
+                    <option value="bilingual">🌐 Bilingual (द्विभाषी)</option>
+                    <option value="other">✨ Other / अन्य</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Genre / Category *</label>
+                  <select id="adminPoemCategory">
+                    <option value="inspirational">Inspirational / प्रेरणादायक</option>
+                    <option value="ghazal">Ghazal & Nazm / ग़ज़ल एवं नज़्म</option>
+                    <option value="classical">Classical / छंदबद्ध काव्य</option>
+                    <option value="modern">Modern Free Verse / समकालीन</option>
+                    <option value="romantic">Romantic & Nature / प्रकृति व शृंगार</option>
+                    <option value="devotional">Devotional / भक्ति व दर्शन</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 3: Multimodal Attachments (Image & PDF) -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <!-- Image Attachment -->
+                <div class="kg-admin-file-picker">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: var(--kg-brand-primary); display: flex; align-items: center; gap: 0.35rem;">
+                    <span>🖼️</span> Poem Manuscript / Artwork (छवि / पांडुलिपि)
+                  </label>
+                  <input type="url" id="adminPoemImageUrl" placeholder="Paste Image URL or pick local file below..." />
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                    <input type="file" id="adminPoemImageFile" accept="image/*" style="font-size: 0.78rem;" onchange="App.handleAdminPoemImageFile(this)" />
+                  </div>
+                  <div id="adminPoemImagePreviewWrap" class="kg-hidden" style="margin-top: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <img id="adminPoemImagePreview" class="kg-admin-thumb-preview" alt="Preview" />
+                    <button type="button" class="kg-btn kg-btn-sm" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;" onclick="App.clearAdminPoemImage()">✕ Clear</button>
+                  </div>
+                </div>
+
+                <!-- PDF Attachment -->
+                <div class="kg-admin-file-picker">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: #dc2626; display: flex; align-items: center; gap: 0.35rem;">
+                    <span>📄</span> Complete Poem PDF / Anthology (कविता PDF)
+                  </label>
+                  <input type="url" id="adminPoemPdfUrl" placeholder="Paste PDF URL or pick local PDF below..." />
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                    <input type="file" id="adminPoemPdfFile" accept=".pdf" style="font-size: 0.78rem;" onchange="App.handleAdminPoemPdfFile(this)" />
+                  </div>
+                  <div id="adminPoemPdfPreviewWrap" class="kg-hidden" style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--kg-text-secondary); display: flex; align-items: center; justify-content: space-between;">
+                    <span id="adminPoemPdfFileName">📄 Document attached</span>
+                    <button type="button" class="kg-btn kg-btn-sm" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;" onclick="App.clearAdminPoemPdf()">✕ Clear</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Primary Verses & Bhavarth -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Original Verses / मूल काव्य पंक्तियाँ *</label>
+                  <textarea id="adminPoemStanza" rows="6" placeholder="Enter original stanzas line by line..." required></textarea>
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Bhavarth & Literary Insight / भावार्थ *</label>
+                  <textarea id="adminPoemMeaning" rows="6" placeholder="Deep poetic meaning, philosophy, and context for students..."></textarea>
+                </div>
+              </div>
+
+              <!-- Row 5: Translation (Optional for Bilingual Recitation) -->
+              <div style="background: var(--kg-bg-muted); border-radius: var(--kg-radius-md); padding: 1rem;">
+                <div style="font-size: 0.82rem; font-weight: 700; color: var(--kg-brand-secondary); margin-bottom: 0.5rem;">
+                  🌐 Optional Translation (For Bilingual Audio Recitation & Reading)
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 0.25rem;">Translated Verses (अनुवादित पंक्तियाँ)</label>
+                    <textarea id="adminPoemStanzaTrans" rows="3" placeholder="English or Hindi translation of verses..."></textarea>
+                  </div>
+                  <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 0.25rem;">Translated Bhavarth (अनुवादित भावार्थ)</label>
+                    <textarea id="adminPoemMeaningTrans" rows="3" placeholder="Translated meaning & insights..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="kg-btn kg-btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.95rem;">
+                  Publish Poem to Database 🚀
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Published Poems List</h3>
+          <div class="kg-admin-table-wrap">
+            <table class="kg-admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Poet</th>
+                  <th>Language & Genre</th>
+                  <th>Attachments</th>
+                  <th>Likes</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminPoetryTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBTAB 2: NOTES MANAGEMENT -->
+        <div id="adminTab-notes" class="kg-admin-subtab-content kg-hidden">
+          <div style="background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
+            <h3 style="margin-bottom: 1rem; font-size: 1.15rem;">Upload Educational Study Material</h3>
+            <form onsubmit="App.handleAdminAddNote(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Topic / Title *</label>
+                  <input type="text" id="adminNoteTitle" placeholder="e.g. रस, छंद और अलंकार संपूर्ण व्याख्या" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Subject *</label>
+                  <input type="text" id="adminNoteSubject" placeholder="e.g. हिंदी साहित्य" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Class / Target</label>
+                  <input type="text" id="adminNoteGrade" placeholder="e.g. Class 12 / CUET" />
+                </div>
+              </div>
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Chapter Summary / Overview *</label>
+                <textarea id="adminNoteSummary" rows="3" placeholder="Key outline and explanations..." required></textarea>
+              </div>
+              <div>
+                <button type="submit" class="kg-btn kg-btn-primary">Add Note to Database</button>
+              </div>
+            </form>
+          </div>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Study Notes List</h3>
+          <div class="kg-admin-table-wrap">
+            <table class="kg-admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Subject</th>
+                  <th>Class</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminNotesTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBTAB 3: YOUTUBE VIDEOS MANAGEMENT -->
+        <div id="adminTab-videos" class="kg-admin-subtab-content kg-hidden">
+          <div style="background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Curate YouTube Video Resource (Admin Choice)</h3>
+                <p style="font-size: 0.85rem; color: var(--kg-text-secondary); margin: 0;">Add any YouTube video of your choice. Students will view and play it directly on YouTube.</p>
+              </div>
+              <span class="kg-tagline-badge" style="background: rgba(255, 0, 0, 0.1); color: #ff0000; border-color: rgba(255, 0, 0, 0.2);">▶️ YouTube</span>
+            </div>
+
+            <form onsubmit="App.handleAdminAddVideo(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Video Title *</label>
+                  <input type="text" id="adminVideoTitle" placeholder="e.g. Hindi Grammar Complete Lecture & Poetry Recitation" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">YouTube Link or Video ID *</label>
+                  <input type="text" id="adminVideoUrl" placeholder="https://www.youtube.com/watch?v=... or youtu.be/..." required oninput="App.previewAdminVideoThumb(this.value)" />
+                </div>
+              </div>
+
+              <!-- YouTube Preview Thumbnail -->
+              <div id="adminVideoPreviewBox" class="kg-hidden" style="display: flex; align-items: center; gap: 1rem; background: var(--kg-bg-muted); padding: 0.75rem; border-radius: var(--kg-radius-md);">
+                <img id="adminVideoThumbImg" style="width: 120px; height: 68px; object-fit: cover; border-radius: 4px;" alt="Video thumbnail" />
+                <div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: var(--kg-text-primary);" id="adminVideoPreviewLabel">Valid YouTube Link Detected</div>
+                  <div style="font-size: 0.75rem; color: var(--kg-text-secondary);">Thumbnail auto-synced from YouTube HQ CDN.</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Channel Name</label>
+                  <input type="text" id="adminVideoChannel" placeholder="e.g. Kavya Guru Official" />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Duration</label>
+                  <input type="text" id="adminVideoDuration" placeholder="e.g. 24:30 or 45 min" />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Category</label>
+                  <select id="adminVideoCategory">
+                    <option value="Literature">Literature & Analysis</option>
+                    <option value="Poetry">Poetry & Voice Recitation</option>
+                    <option value="Grammar">Grammar & Writing Rules</option>
+                    <option value="Exam Strategy">Exam Strategy & CUET</option>
+                    <option value="Career">Career Masterclasses</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Description / Notes for Students</label>
+                <input type="text" id="adminVideoDesc" placeholder="Brief explanation of lecture concepts and learning takeaways..." />
+              </div>
+              <div>
+                <button type="submit" class="kg-btn kg-btn-primary">Add Video to Catalog 🚀</button>
+              </div>
+            </form>
+          </div>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">YouTube Video Catalog</h3>
+          <div class="kg-admin-table-wrap">
+            <table class="kg-admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Channel</th>
+                  <th>YouTube URL</th>
+                  <th>Category</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminVideosTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBTAB 4: GOOGLE MEET LIVE COURSES (Admin Flexible Scheduling) -->
+        <div id="adminTab-courses" class="kg-admin-subtab-content kg-hidden">
+          <div style="background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Schedule Google Meet Batch (At Your Chosen Time)</h3>
+                <p style="font-size: 0.85rem; color: var(--kg-text-secondary); margin: 0;">Set your preferred date and time. Students will see the schedule and RSVP to join.</p>
+              </div>
+              <span class="kg-tagline-badge" style="background: var(--kg-brand-accent-light); color: var(--kg-brand-accent-hover);">🎥 Google Meet</span>
+            </div>
+
+            <form onsubmit="App.handleAdminAddCourse(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+              <!-- Row 1: Title & Meet Link -->
+              <div style="display: grid; grid-template-columns: 2fr 1.5fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Workshop / Course Title *</label>
+                  <input type="text" id="adminCourseTitle" placeholder="e.g. काव्य लेखन, छंद एवं संवाद कार्यशाला" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Google Meet Link *</label>
+                  <input type="url" id="adminCourseMeetLink" placeholder="https://meet.google.com/abc-defg-hij" required />
+                </div>
+              </div>
+
+              <!-- Row 2: Instructor, Date & Time Scheduling -->
+              <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Instructor / Mentor *</label>
+                  <input type="text" id="adminCourseInstructor" placeholder="e.g. प्रो. आलोक शर्मा / Guest Poet" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Date Schedule *</label>
+                  <input type="text" id="adminCourseDate" placeholder="e.g. 15 Oct 2026 or Every Sunday" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Time / समय *</label>
+                  <input type="text" id="adminCourseTime" placeholder="e.g. 06:30 PM IST" required />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Seats Limit</label>
+                  <input type="number" id="adminCourseSeats" value="50" min="5" max="500" />
+                </div>
+              </div>
+
+              <!-- Row 3: Badge, Fee & Highlights -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Session Badge</label>
+                  <select id="adminCourseBadge">
+                    <option value="Live Masterclass" selected>Live Masterclass</option>
+                    <option value="Weekend Workshop">Weekend Workshop</option>
+                    <option value="Poetry Mentorship">Poetry Mentorship</option>
+                    <option value="Guest Poet Session">Guest Poet Session</option>
+                    <option value="Doubt Clearing Circle">Doubt Clearing Circle</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Fee Status</label>
+                  <input type="text" id="adminCourseFee" value="Free for Students" />
+                </div>
+                <div>
+                  <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Key Highlights (Comma separated)</label>
+                  <input type="text" id="adminCourseHighlights" placeholder="e.g. Live Q&A, Certificate of Participation, Personal Verse Feedback" />
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="kg-btn kg-btn-primary" style="padding: 0.75rem 1.75rem;">
+                  Schedule Google Meet Batch 🚀
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Scheduled Google Meet Batches</h3>
+          <div class="kg-admin-table-wrap">
+            <table class="kg-admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Instructor</th>
+                  <th>Schedule</th>
+                  <th>Seats</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminCoursesTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBTAB 5: COMMUNITY MODERATION -->
+        <div id="adminTab-community" class="kg-admin-subtab-content kg-hidden">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Community Discussion Threads</h3>
+          <div class="kg-admin-table-wrap">
+            <table class="kg-admin-table">
+              <thead>
+                <tr>
+                  <th>Author</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Likes</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminCommunityTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW I: USER PROFILE & PERSONAL LIBRARY
+         ==================================================================== -->
+    <section id="view-profile" class="kg-view-section kg-hidden">
+      <div class="kg-container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+        <!-- Profile Banner -->
+        <div style="background: var(--kg-bg-surface); border: 1px solid var(--kg-border); border-radius: var(--kg-radius-xl); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="profileAvatar" style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--kg-brand-primary), var(--kg-brand-accent)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; box-shadow: 0 4px 16px var(--kg-brand-primary-glow);">AK</div>
+            <div>
+              <h2 id="profileName" style="font-size: 1.5rem;">Amit Kumar</h2>
+              <p id="profileEmail" style="font-size: 0.88rem; color: var(--kg-text-secondary);">amit@kavyaguru.com</p>
+              <span id="profileRole" class="kg-accent-pill" style="margin-top: 0.4rem; display: inline-block;">Scholar & Poet</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <div style="text-align: right;">
+              <div style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Reading Streak</div>
+              <div id="profileStreakDays" style="font-size: 1.25rem; font-weight: 800; color: var(--kg-brand-primary);">7 Days 🔥</div>
+            </div>
+            <button class="kg-btn kg-btn-outline" onclick="App.handleLogout()">Log Out</button>
+          </div>
+        </div>
+
+        <!-- Enrolled Courses -->
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">My Google Meet Batches</h3>
+        <div id="profileCoursesList" style="margin-bottom: 2.5rem;"></div>
+
+        <!-- Saved Library -->
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Saved in Kavya Guru Library</h3>
+        <div id="profileSavedList"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       3. Mobile Bottom Navigation
+       ======================================================================== -->
+  <nav class="kg-mobile-nav" aria-label="Mobile Bottom Navigation">
+    <a href="#home" class="kg-mobile-nav-item active" data-route="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span data-i18n="nav_home">Home</span>
+    </a>
+    <a href="#poetry" class="kg-mobile-nav-item" data-route="poetry">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+      <span data-i18n="nav_poetry">Poetry</span>
+    </a>
+    <a href="#notes" class="kg-mobile-nav-item" data-route="notes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span data-i18n="nav_notes">Notes</span>
+    </a>
+    <a href="#courses" class="kg-mobile-nav-item" data-route="courses">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+      <span data-i18n="nav_courses">Meet</span>
+    </a>
+    <a href="#community" class="kg-mobile-nav-item" data-route="community">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span data-i18n="nav_community">Charcha</span>
+    </a>
+    <a href="#profile" class="kg-mobile-nav-item" data-route="profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span data-i18n="nav_account">Profile</span>
+    </a>
+  </nav>
+
+  <!-- ========================================================================
+       4. Official Brand Footer
+       ======================================================================== -->
+  <footer class="kg-footer">
+    <div class="kg-container">
+      <div class="kg-footer-grid">
+        <!-- Brand Info -->
+        <div>
+          <a href="#home" class="kg-brand-logo" data-route="home">
+            <div class="kg-brand-mark">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="kg-brand-text">
+              <span class="kg-brand-name" data-i18n="brand_name">Kavya Guru</span>
+              <span class="kg-brand-tagline-sub" data-i18n="brand_tagline">Read • Learn • Grow</span>
+            </div>
+          </a>
+          <p class="kg-footer-brand-desc" data-i18n="footer_philosophy">
+            Kavya Guru is your space for poetry, knowledge, learning, courses and career guidance. Designed to ignite curiosity, literary expression, and academic excellence among youth worldwide.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="kg-footer-col">
+          <h4 data-i18n="footer_nav_heading">Platform Hubs</h4>
+          <ul class="kg-footer-links">
+            <li><a href="#poetry" data-route="poetry" data-i18n="nav_poetry">Kavya Manch</a></li>
+            <li><a href="#notes" data-route="notes" data-i18n="nav_notes">Educational Notes</a></li>
+            <li><a href="#videos" data-route="videos" data-i18n="nav_videos">YouTube Modules</a></li>
+            <li><a href="#courses" data-route="courses" data-i18n="nav_courses">Google Meet Batches</a></li>
+            <li><a href="#career" data-route="career" data-i18n="nav_career">Career Roadmaps</a></li>
+          </ul>
+        </div>
+
+        <!-- Community & Help -->
+        <div class="kg-footer-col">
+          <h4 data-i18n="footer_connect_heading">Community & Admin</h4>
+          <ul class="kg-footer-links">
+            <li><a href="#community" data-route="community" data-i18n="nav_community">Kavya Guru Charcha</a></li>
+            <li><a href="#profile" data-route="profile" data-i18n="nav_account">Student Profile</a></li>
+            <li><a href="#admin" data-route="admin" data-i18n="nav_admin">Admin Dashboard</a></li>
+            <li><a href="#" onclick="App.openEmailPreview('em-01')">Sample Transactional Email</a></li>
+            <li><a href="mailto:support@kavyaguru.com">support@kavyaguru.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Student Digest -->
+        <div class="kg-footer-col">
+          <h4>Kavya Guru Weekly</h4>
+          <p style="font-size: 0.88rem; color: var(--kg-text-secondary); margin-bottom: 0.75rem;">Get curated poems, new study summaries, and Google Meet class invitations.</p>
+          <form onsubmit="event.preventDefault(); UIManager.showToast('Subscribed to Kavya Guru Weekly Digest! 📬', 'success');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" required style="flex: 1;" />
+            <button type="submit" class="kg-btn kg-btn-primary" style="padding: 0.65rem 1rem;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="kg-footer-bottom">
+        <div data-i18n="footer_copyright">© 2026 <strong>Kavya Guru</strong>. All rights reserved. Read • Learn • Grow.</div>
+        
+        <!-- Multilingual Footer Selector -->
+        <div class="kg-footer-lang">
+          <span style="font-size: 0.78rem; color: var(--kg-text-tertiary);">🌐</span>
+          <button id="footerLangEn" class="kg-footer-lang-btn">English</button>
+          <span style="color: var(--kg-border);">|</span>
+          <button id="footerLangHi" class="kg-footer-lang-btn active">हिंदी</button>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#home" style="color: inherit;" data-i18n="footer_privacy">Privacy Policy</a>
+          <a href="#home" style="color: inherit;" data-i18n="footer_terms">Terms of Learning</a>
+          <a href="#home" style="color: inherit;" data-i18n="footer_honor">Student Code of Honor</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       5. Interactive Modals
+       ======================================================================== -->
+
+  <!-- Modal 1: Global Search Modal -->
+  <div id="globalSearchModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 650px;">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Search Kavya Guru
+        </div>
+        <button class="kg-modal-close" data-close-modal="globalSearchModal">✕</button>
+      </div>
+      <div class="kg-modal-content">
+        <input type="text" id="globalSearchInput" placeholder="Search by poem title, poet, note subject, course, or video..." style="font-size: 1.05rem; margin-bottom: 1rem;" autofocus />
+        <div id="globalSearchResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Poem Reader & Audio Recite Modal -->
+  <div id="poemReaderModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 720px;">
+      <div class="kg-modal-header">
+        <div>
+          <h3 id="poemReaderTitle" class="kg-modal-title">अग्निपथ (Agneepath)</h3>
+          <span id="poemReaderPoet" style="font-size: 0.8rem; color: var(--kg-text-tertiary);">डॉ. हरिवंश राय बच्चन</span>
+        </div>
+        <button class="kg-modal-close" data-close-modal="poemReaderModal">✕</button>
+      </div>
+      <div class="kg-modal-content" style="text-align: center;">
+        
+        <!-- Multilingual Audio Recitation Studio -->
+        <div class="kg-recite-studio" id="reciteStudioBox">
+          <!-- Studio Header & Audio Status -->
+          <div class="kg-recite-status-bar">
+            <div class="kg-recite-status-info">
+              <span class="kg-recite-status-dot" id="reciteStatusDot"></span>
+              <span id="reciteStatusText">Select language & voice to listen to recitation</span>
+            </div>
+            <!-- Animated Sound Wave Visualizer -->
+            <div id="poemVisualizer" class="kg-recite-visualizer kg-hidden">
+              <div class="kg-recite-bar"></div>
+              <div class="kg-recite-bar"></div>
+              <div class="kg-recite-bar"></div>
+              <div class="kg-recite-bar"></div>
+              <div class="kg-recite-bar"></div>
+              <div class="kg-recite-bar"></div>
+            </div>
+          </div>
+
+          <!-- Controls Grid: Language & Content Mode -->
+          <div class="kg-recite-controls-grid">
+            <div class="kg-recite-ctrl-item">
+              <label class="kg-recite-ctrl-label">🎙️ Recitation Language / वाचन भाषा:</label>
+              <div class="kg-recite-lang-group" id="reciteLangButtonGroup">
+                <button type="button" class="kg-recite-lang-btn active" data-recite-lang="hindi" id="reciteLangBtnHindi">
+                  <span>🇮🇳</span> हिंदी (Hindi)
+                </button>
+                <button type="button" class="kg-recite-lang-btn" data-recite-lang="english" id="reciteLangBtnEnglish">
+                  <span>🇬🇧</span> English
+                </button>
+              </div>
+            </div>
+
+            <div class="kg-recite-ctrl-item">
+              <label class="kg-recite-ctrl-label">📜 Recitation Mode / पाठ प्रकार:</label>
+              <select id="reciteContentModeSelect" class="kg-recite-select">
+                <option value="stanza" selected>📜 Poetic Verses (काव्य पंक्तियाँ)</option>
+                <option value="meaning">💡 Bhavarth & Insight (भावार्थ)</option>
+                <option value="both">✨ Full Verse & Bhavarth (पूर्ण पाठ)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Secondary Audio Tuning: Voice & Speed -->
+          <div class="kg-recite-tune-row">
+            <div style="flex: 2; min-width: 180px;">
+              <label class="kg-recite-ctrl-label">🗣️ Voice Selection / आवाज़:</label>
+              <select id="reciteVoiceSelect" class="kg-recite-select">
+                <option value="auto">✨ Default Poetic Voice</option>
+              </select>
+            </div>
+
+            <div style="flex: 1; min-width: 120px;">
+              <label class="kg-recite-ctrl-label">⏱️ Cadence / गति:</label>
+              <select id="reciteSpeedSelect" class="kg-recite-select">
+                <option value="0.82" selected>0.82x Poetic (भावपूर्ण)</option>
+                <option value="1.0">1.0x Normal (सामान्य)</option>
+                <option value="1.15">1.15x Expressive (तीव्र)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Main Recitation Action Buttons -->
+          <div class="kg-recite-actions-row">
+            <button id="poemRecitePlayBtn" class="kg-btn kg-btn-accent kg-recite-play-main">
+              <span id="recitePlayBtnIcon">▶️</span>
+              <span id="recitePlayBtnText">Listen to Recitation (वाचन सुनें)</span>
+            </button>
+            <button id="poemReciteStopBtn" class="kg-btn kg-btn-secondary kg-hidden" title="Stop Recitation">
+              <span>⏹️ Stop</span>
+            </button>
+            <button class="kg-btn kg-btn-outline" onclick="App.shareItem(document.getElementById('poemReaderTitle').textContent)" title="Share Verse">
+              <span>🔗 Share</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Attached Poem Manuscript / Artwork (If Available) -->
+        <div id="poemReaderImageWrap" class="kg-poem-manuscript-box kg-hidden">
+          <img id="poemReaderImage" class="kg-poem-manuscript-img" alt="Poem Manuscript Artwork" onclick="window.open(this.src, '_blank')" title="Click to view full image in new tab ↗" />
+          <div class="kg-poem-manuscript-caption">
+            <span>🖼️</span> <span>हस्तलिखित पांडुलिपि / मूल काव्य कलाकृति (Click to enlarge ↗)</span>
+          </div>
+        </div>
+
+        <!-- Attached Poem PDF Document (If Available) -->
+        <div id="poemReaderPdfWrap" class="kg-poem-pdf-box kg-hidden">
+          <div class="kg-poem-pdf-info">
+            <span class="kg-poem-pdf-icon">📄</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem; color: #991b1b;">Complete Poem PDF Document Attached</div>
+              <div style="font-size: 0.8rem; color: var(--kg-text-secondary);">Downloadable collection, print sheet, or study manuscript.</div>
+            </div>
+          </div>
+          <a id="poemReaderPdfBtn" href="#" target="_blank" rel="noopener noreferrer" class="kg-btn kg-btn-sm" style="background: #dc2626; color: #ffffff; text-decoration: none; padding: 0.5rem 1rem;">
+            📥 Download / View PDF ↗
+          </a>
+        </div>
+
+        <!-- Bilingual Reading Switcher Tabs -->
+        <div class="kg-stanza-tabs" id="stanzaReadingTabs">
+          <button type="button" class="kg-stanza-tab-btn active" id="stanzaTabOriginal">📜 Original Text (मूल रचना)</button>
+          <button type="button" class="kg-stanza-tab-btn" id="stanzaTabTranslation">🌐 Translation (अनुवाद)</button>
+        </div>
+
+        <!-- Stanza text -->
+        <div id="poemReaderStanza" class="kg-poetry-stanza" style="font-size: 1.25rem; line-height: 2.2; margin: 1rem auto; max-width: 560px; min-height: 120px;"></div>
+
+        <!-- Meaning / Literary Context -->
+        <div style="background: var(--kg-bg-muted); border-radius: var(--kg-radius-md); padding: 1.2rem; margin-top: 1.5rem; text-align: left; border-left: 3px solid var(--kg-brand-primary);">
+          <div style="font-size: 0.78rem; font-weight: 700; color: var(--kg-brand-primary); text-transform: uppercase; margin-bottom: 0.35rem;" id="poemReaderMeaningHeading">Kavya Guru Bhavarth (Meaning & Insight):</div>
+          <p id="poemReaderMeaning" style="font-size: 0.92rem; color: var(--kg-text-secondary); margin: 0;"></p>
+        </div>
+      </div>
+      <div class="kg-modal-footer">
+        <button class="kg-btn kg-btn-secondary" data-close-modal="poemReaderModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Submit Poetry Modal -->
+  <div id="submitPoemModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">✍️ Submit Your Kavya to Kavya Guru</div>
+        <button class="kg-modal-close" data-close-modal="submitPoemModal">✕</button>
+      </div>
+      <form id="submitPoemForm" onsubmit="App.handleSubmitPoem(event)">
+        <div class="kg-modal-content">
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Poem Title *</label>
+              <input type="text" id="poemInputTitle" placeholder="e.g. आशा की किरण / Whispers of Autumn" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Author / Poet Name</label>
+                <input type="text" id="poemInputPoet" placeholder="Your pen name" />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Language</label>
+                <select id="poemInputLanguage">
+                  <option value="hindi">Hindi (हिंदी)</option>
+                  <option value="english">English</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Category</label>
+              <select id="poemInputCategory">
+                <option value="inspirational">Inspirational / प्रेरणादायक</option>
+                <option value="ghazal">Ghazal / ग़ज़ल</option>
+                <option value="classical">Classical / छंदबद्ध</option>
+                <option value="modern">Modern Free Verse / समकालीन</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Poem Stanza Verses *</label>
+              <textarea id="poemInputStanza" rows="5" placeholder="Write or paste your poem stanzas here..." required></textarea>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Poem Meaning / Inspiration (Optional)</label>
+              <input type="text" id="poemInputMeaning" placeholder="What inspired you to write this piece?" />
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer">
+          <button type="button" class="kg-btn kg-btn-secondary" data-close-modal="submitPoemModal">Cancel</button>
+          <button type="submit" class="kg-btn kg-btn-primary">Publish to Kavya Manch</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: Note Viewer Modal -->
+  <div id="noteViewerModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 680px;">
+      <div class="kg-modal-header">
+        <div>
+          <h3 id="noteViewerTitle" class="kg-modal-title">Chapter Notes</h3>
+          <span id="noteViewerSubject" style="font-size: 0.8rem; color: var(--kg-text-tertiary);">Subject Details</span>
+        </div>
+        <button class="kg-modal-close" data-close-modal="noteViewerModal">✕</button>
+      </div>
+      <div class="kg-modal-content">
+        <p id="noteViewerSummary" style="font-size: 0.95rem; color: var(--kg-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;"></p>
+        
+        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Syllabus Outline:</h4>
+        <ul id="noteViewerChapters" style="list-style: none; margin-bottom: 1.5rem;"></ul>
+
+        <h4 style="font-size: 1rem; margin-bottom: 0.75rem;">Key Takeaways for Students:</h4>
+        <div id="noteViewerKeyPoints" style="display: flex; flex-direction: column; gap: 0.65rem;"></div>
+      </div>
+      <div class="kg-modal-footer">
+        <button class="kg-btn kg-btn-secondary" onclick="App.downloadNotePdf(App.activeNote ? App.activeNote.id : '')">📥 Download PDF</button>
+        <button class="kg-btn kg-btn-primary" data-close-modal="noteViewerModal">Done Reading</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: YouTube Video Player Modal -->
+  <div id="videoPlayerModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 760px;">
+      <div class="kg-modal-header">
+        <h3 id="videoPlayerTitle" class="kg-modal-title" style="font-size: 1.15rem;">Video Player</h3>
+        <button class="kg-modal-close" data-close-modal="videoPlayerModal">✕</button>
+      </div>
+      <div class="kg-modal-content">
+        <div id="videoPlayerContainer" style="margin-bottom: 1.25rem;"></div>
+        <p id="videoPlayerDesc" style="font-size: 0.9rem; color: var(--kg-text-secondary); margin-bottom: 1.25rem;"></p>
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Chapter Markers:</h4>
+        <div id="videoTimestampsList" style="display: flex; flex-direction: column; gap: 0.5rem;"></div>
+      </div>
+      <div class="kg-modal-footer">
+        <button class="kg-btn kg-btn-secondary" data-close-modal="videoPlayerModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Google Meet RSVP Modal -->
+  <div id="meetRsvpModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog">
+      <div class="kg-modal-header">
+        <div>
+          <h3 class="kg-modal-title">🎥 Google Meet Enrollment</h3>
+          <span style="font-size: 0.8rem; color: var(--kg-brand-emerald); font-weight: 600;">Free Live Access</span>
+        </div>
+        <button class="kg-modal-close" data-close-modal="meetRsvpModal">✕</button>
+      </div>
+      <form id="meetRsvpForm" onsubmit="App.handleMeetRsvpSubmit(event)">
+        <input type="hidden" id="meetRsvpCourseId" />
+        <div class="kg-modal-content">
+          <div style="background: var(--kg-bg-muted); border-radius: var(--kg-radius-md); padding: 1rem; margin-bottom: 1.25rem;">
+            <h4 id="meetRsvpTitle" style="font-size: 1rem; margin-bottom: 0.25rem;">Course Title</h4>
+            <div id="meetRsvpInstructor" style="font-size: 0.85rem; color: var(--kg-brand-primary);">Instructor</div>
+            <div id="meetRsvpTiming" style="font-size: 0.8rem; color: var(--kg-text-tertiary); margin-top: 0.25rem;">Timings</div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Full Name *</label>
+              <input type="text" id="meetRsvpName" placeholder="Enter student name" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Email Address *</label>
+              <input type="email" id="meetRsvpEmail" placeholder="Where should we send the Google Meet link?" required />
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer">
+          <button type="button" class="kg-btn kg-btn-secondary" data-close-modal="meetRsvpModal">Cancel</button>
+          <button type="submit" class="kg-btn kg-btn-accent">Confirm Reservation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 7: 1-on-1 Mentorship Booking Modal -->
+  <div id="mentorshipModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">🧭 Book 1-on-1 Guidance Session</div>
+        <button class="kg-modal-close" data-close-modal="mentorshipModal">✕</button>
+      </div>
+      <form onsubmit="App.handleMentorshipSubmit(event)">
+        <div class="kg-modal-content">
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Your Chosen Career Domain</label>
+              <input type="text" id="mentorshipCareerInput" readonly style="background: var(--kg-bg-muted);" />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Your Name *</label>
+              <input type="text" id="mentorshipName" placeholder="Student name" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Current Class / Degree *</label>
+              <input type="text" placeholder="e.g. Class 12, BA Literature, CUET Aspirant" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Questions for the Mentor</label>
+              <textarea rows="3" placeholder="What guidance or roadmap questions do you have?"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer">
+          <button type="button" class="kg-btn kg-btn-secondary" data-close-modal="mentorshipModal">Cancel</button>
+          <button type="submit" class="kg-btn kg-btn-primary">Schedule Mentorship</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 8: Career Pathfinder Quiz Modal -->
+  <div id="careerQuizModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">🎯 Kavya Guru Career Match Quiz</div>
+        <button class="kg-modal-close" data-close-modal="careerQuizModal">✕</button>
+      </div>
+      <form onsubmit="App.handleCareerQuizSubmit(event)">
+        <div class="kg-modal-content">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <label style="font-weight: 600; font-size: 0.95rem; display: block; margin-bottom: 0.5rem;">1. What excites you the most?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.9rem;">
+                <label><input type="radio" name="quiz_q1" value="writing" checked /> Writing captivating stories, scripts & blogs</label>
+                <label><input type="radio" name="quiz_q1" value="teaching" /> Teaching, research & deep literary philosophy</label>
+                <label><input type="radio" name="quiz_q1" value="civil" /> Public administration & solving societal challenges</label>
+              </div>
+            </div>
+
+            <div>
+              <label style="font-weight: 600; font-size: 0.95rem; display: block; margin-bottom: 0.5rem;">2. Preferred work style?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.9rem;">
+                <label><input type="radio" name="quiz_q2" value="creative" checked /> Creative flexibility & dynamic media</label>
+                <label><input type="radio" name="quiz_q2" value="academic" /> Academic rigor & institutional scholarship</label>
+              </div>
+            </div>
+
+            <div id="quizResultBox" class="kg-hidden" style="background: var(--kg-brand-emerald-light); border: 1px solid var(--kg-brand-emerald); padding: 1rem; border-radius: var(--kg-radius-md);">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--kg-brand-emerald); text-transform: uppercase;">Top Recommended Career Track:</div>
+              <h4 id="quizResultTitle" style="color: #065f46; margin-top: 0.25rem;"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer">
+          <button type="button" class="kg-btn kg-btn-secondary" data-close-modal="careerQuizModal">Close</button>
+          <button type="submit" class="kg-btn kg-btn-primary">Find My Path</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 9: New Community Discussion Modal -->
+  <div id="newThreadModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">💬 Start Discussion on Kavya Guru Charcha</div>
+        <button class="kg-modal-close" data-close-modal="newThreadModal">✕</button>
+      </div>
+      <form id="newThreadForm" onsubmit="App.handleCreateThread(event)">
+        <div class="kg-modal-content">
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Topic Title *</label>
+              <input type="text" id="threadInputTitle" placeholder="e.g. Favorite Hindi Ghazal of the 20th century?" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Category Tag</label>
+              <select id="threadInputTag">
+                <option value="Poem of the Day">Poem of the Day</option>
+                <option value="Doubt Clearance">Doubt Clearance</option>
+                <option value="Study Circle">Study Circle</option>
+                <option value="Book Recommendations">Book Recommendations</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Your Thoughts / Question *</label>
+              <textarea id="threadInputContent" rows="4" placeholder="Share your perspective with fellow students..." required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer">
+          <button type="button" class="kg-btn kg-btn-secondary" data-close-modal="newThreadModal">Cancel</button>
+          <button type="submit" class="kg-btn kg-btn-primary">Post to Community</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 10: Notifications Drawer -->
+  <div id="notificationsDrawerModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 500px;">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">🔔 Kavya Guru Notifications</div>
+        <button class="kg-modal-close" data-close-modal="notificationsDrawerModal">✕</button>
+      </div>
+      <div class="kg-modal-content">
+        <div id="notifDrawerList" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
+      </div>
+      <div class="kg-modal-footer">
+        <button class="kg-btn kg-btn-secondary" data-close-modal="notificationsDrawerModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 11: Transactional Email Preview -->
+  <div id="emailPreviewModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 650px;">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">📧 Kavya Guru Branded Email</div>
+        <button class="kg-modal-close" data-close-modal="emailPreviewModal">✕</button>
+      </div>
+      <div class="kg-modal-content">
+        <div id="emailPreviewContainer"></div>
+      </div>
+      <div class="kg-modal-footer">
+        <button class="kg-btn kg-btn-secondary" data-close-modal="emailPreviewModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 12: Auth Login / Register Modal -->
+  <div id="authModal" class="kg-modal-overlay">
+    <div class="kg-modal-dialog" style="max-width: 440px;">
+      <div class="kg-modal-header">
+        <div class="kg-modal-title">Welcome to Kavya Guru</div>
+        <button class="kg-modal-close" data-close-modal="authModal">✕</button>
+      </div>
+      <form onsubmit="App.handleAuthSubmit(event)">
+        <div class="kg-modal-content">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-weight: 800; font-size: 1.5rem; color: var(--kg-brand-primary);">KAVYA GURU</div>
+            <div style="font-size: 0.8rem; font-weight: 600; color: var(--kg-brand-accent); letter-spacing: 0.08em;">READ • LEARN • GROW</div>
+            <p style="font-size: 0.88rem; color: var(--kg-text-secondary); margin-top: 0.5rem;">Sign in to save poems, join Google Meet courses, and participate in community discussions.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Full Name</label>
+              <input type="text" id="authNameInput" placeholder="Your name" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Email Address</label>
+              <input type="email" id="authEmailInput" placeholder="name@example.com" required />
+            </div>
+          </div>
+        </div>
+        <div class="kg-modal-footer" style="justify-content: space-between;">
+          <span style="font-size: 0.75rem; color: var(--kg-text-tertiary);">Free Student Access</span>
+          <button type="submit" class="kg-btn kg-btn-primary">Enter Kavya Guru</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/storage.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/i18n.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/router.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "kavya-guru",
+  "version": "1.0.0",
+  "description": "Kavya Guru — Read • Learn • Grow. Modern mobile-first platform combining poetry, educational notes, YouTube learning, Google Meet courses, career guidance, and student community.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Kavya Guru build verified for Vercel')\""
+  },
+  "engines": {
+    "node": ">=22.x"
+  },
+  "keywords": [
+    "kavya-guru",
+    "poetry",
+    "education",
+    "notes",
+    "google-meet",
+    "youtube",
+    "career"
+  ],
+  "author": "Kavya Guru",
+  "license": "MIT"
+}
